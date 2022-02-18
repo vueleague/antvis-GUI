@@ -22,7 +22,7 @@
     "clean": "rimraf lib esm dist",
     "lint-staged": "lint-staged",
     "size": "limit-size",
-    "lint": "eslint ./src/**/*.ts ./__tests__/**/*.ts && prettier ./src ./__tests__ --check ",
+    "lint": "NODE_ENV=test && eslint ./src/**/*.ts ./__tests__/**/*.ts && prettier ./src ./__tests__ --check ",
     "fix": "eslint ./src/**/*.ts ./__tests__/**/*.ts --fix && prettier ./src ./__tests__ --write ",
     "coverage": "jest -w 16 --coverage",
     "test": "jest",
